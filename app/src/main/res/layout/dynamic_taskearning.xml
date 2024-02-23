@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardview"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="3dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview1"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        app:cardCornerRadius="5dp"
+        app:strokeWidth="1dp"
+        app:cardBackgroundColor="#342F4F"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/ll"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:background="@color/skyblue"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/msg_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Live Jeeto Contest 11 may 2022"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+                <View
+                    android:layout_below="@+id/msg_tv1"
+                    android:id="@+id/vie"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/grey"
+                    android:layout_height="0.1dp">
+                </View>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/msg_tv"
+                android:layout_below="@+id/ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="2dp"
+                android:text="Live Jeeto Contest 11 may 2022"
+                android:textColor="@color/white"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/des_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/msg_tv"
+                android:textColor="@color/white"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="2dp"
+                android:text=" Comment : test Service working\n Reply :  Give answer and win 1000/1 win price money "
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_centerVertical="true"
+                android:layout_below="@+id/des_tv"
+                android:gravity="center_vertical"
+                android:textAlignment="center"
+                android:padding="7dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/rounded_edittext_black"
+                android:text="Pending"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

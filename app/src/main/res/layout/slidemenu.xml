@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+    <ScrollView android:scrollbars="none"
+        android:layout_above="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+          <!--  <ImageView
+                android:backgroundTint="@color/white"
+                android:padding="20dp"
+                android:background="@drawable/dasbox"
+                android:layout_width="wrap_content"
+                android:src="@drawable/logogonden"
+                android:layout_height="200dp">
+            </ImageView>
+-->
+            <include layout="@layout/profile_header"></include>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="5dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/r_k" android:tint="@color/golden" />
+                    <TextView  android:drawableRight="@drawable/ic_navigate_next"
+                        android:id="@+id/home_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:text="Home"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#fff"
+                        android:textSize="14dp"  
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/grey"
+                android:layout_height="0.1dp">
+            </View>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="5dp"
+                    android:id="@+id/all_plan_ll"
+
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/a3" />
+                    <TextView  android:drawableRight="@drawable/ic_navigate_next"
+                        android:id="@+id/plan_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:text="My Plan"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#fff"
+                        android:textSize="14dp"  
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/grey"
+                    android:layout_height="0.1dp">
+                </View>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/plan_ll"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:padding="5dp"
+
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/dd_plan_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:text="DD Plan"
+                            android:padding="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#fff"
+                            android:textSize="14dp"
+                            />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="@color/grey"
+                        android:layout_height="0.1dp">
+                    </View>
+                    <LinearLayout
+                        android:padding="5dp"
+
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:padding="5dp"
+                            android:id="@+id/fdplan_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:text="FD Plan"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#fff"
+                            android:textSize="14dp"
+                            />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="@color/grey"
+                        android:layout_height="0.1dp">
+                    </View>
+                    <LinearLayout
+                        android:padding="5dp"
+
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:padding="5dp"
+                            android:id="@+id/dipplan_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:text="DIP Plan"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#fff"
+                            android:textSize="14dp"
+                            />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="@color/grey"
+                        android:layout_height="0.1dp">
+                    </View>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/grey"
+                android:layout_height="0.1dp">
+            </View>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="5dp"
+
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/a1" />
+                    <TextView  android:drawableRight="@drawable/ic_navigate_next"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:id="@+id/all_earning_ll"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:text="My Earning"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#fff"
+                        android:textSize="14dp"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/grey"
+                    android:layout_height="0.1dp">
+                </View>
+
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/earnimg_ll"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:padding="5dp"
+
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/referal_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:text="Referral Earning"
+                            android:padding="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#fff"
+                            android:textSize="14dp"
+                            />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="@color/grey"
+                        android:layout_height="0.1dp">
+                    </View>
+                    <LinearLayout
+                        android:padding="5dp"
+
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:padding="5dp"
+                            android:id="@+id/team_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:text="Team Earning"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#fff"
+                            android:textSize="14dp"
+                            />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="@color/grey"
+                        android:layout_height="0.1dp">
+                    </View>
+                    <LinearLayout
+                        android:padding="5dp"
+
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:padding="5dp"
+                            android:id="@+id/task_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:text="Task Earning"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#fff"
+                            android:textSize="14dp"
+                            />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="@color/grey"
+                        android:layout_height="0.1dp">
+                    </View>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="5dp"
+
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/a5" />
+                    <TextView  android:drawableRight="@drawable/ic_navigate_next"
+                        android:id="@+id/wallet_tv"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:text="Wallet Report"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#fff"
+                        android:textSize="14dp"  
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:background="@color/grey"
+                android:layout_height="0.1dp">
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="5dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/user_icon" />
+                    <TextView  android:drawableRight="@drawable/ic_navigate_next"
+                        android:id="@+id/account_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:text="Account"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#fff"
+                        android:textSize="14dp"  
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/grey"
+                android:layout_height="0.1dp">
+            </View>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="5dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/a_creditscore" />
+                    <TextView  android:drawableRight="@drawable/ic_navigate_next"
+                        android:id="@+id/earning_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:text="Task Earning"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#fff"
+                        android:textSize="14dp"  
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/grey"
+                android:layout_height="0.1dp">
+            </View>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/all_team_ll"
+                    android:padding="5dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/a9" />
+                    <TextView  android:drawableRight="@drawable/ic_navigate_next"
+                        android:id="@+id/referperson_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:text="My Team"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#fff"
+                        android:textSize="14dp"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/grey"
+                    android:layout_height="0.1dp">
+                </View>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/team_referral_ll"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:padding="5dp"
+
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/myreferal_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:text="My Referral"
+                            android:padding="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#fff"
+                            android:textSize="14dp"
+                            />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="@color/grey"
+                        android:layout_height="0.1dp">
+                    </View>
+                    <LinearLayout
+                        android:padding="5dp"
+
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:padding="5dp"
+                            android:id="@+id/my_team_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:text="My Total Team"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#fff"
+                            android:textSize="14dp"
+                            />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="@color/grey"
+                        android:layout_height="0.1dp">
+                    </View>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/grey"
+                android:layout_height="0.1dp">
+            </View>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="5dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/a6" />
+                    <TextView  android:drawableRight="@drawable/ic_navigate_next"
+                        android:id="@+id/ourservices_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:text="Our Services"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#fff"
+                        android:textSize="14dp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/grey"
+                android:layout_height="0.1dp">
+            </View>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="5dp"
+
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:tint="@color/golden"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/a_withdraw" />
+                    <TextView  android:drawableRight="@drawable/ic_navigate_next"
+                        android:id="@+id/recharge_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:text="Recharge Services"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#fff"
+                        android:textSize="14dp"  
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/grey"
+                android:layout_height="0.1dp">
+            </View>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="5dp"
+
+                    android:orientation="horizontal"  android:paddingLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/a_moneytransfer" />
+                    <TextView  android:drawableRight="@drawable/ic_navigate_next"
+                        android:id="@+id/fundtransfer_tv"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:text="Fund Transfer History"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#fff"
+                        android:textSize="14dp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/grey"
+                android:layout_height="0.1dp">
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="5dp"
+
+                    android:orientation="horizontal"  android:paddingLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/a5" />
+                    <TextView  android:drawableRight="@drawable/ic_navigate_next"
+                        android:id="@+id/walletTransfer_tv"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:text="Wallet Transfer History"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#fff"
+                        android:textSize="14dp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/grey"
+                android:layout_height="0.1dp">
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="5dp"
+
+                    android:orientation="horizontal"  android:paddingLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/announcemnet_icon" />
+                    <TextView  android:drawableRight="@drawable/ic_navigate_next"
+                        android:id="@+id/announcement_tv"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:text="Announcement List"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#fff"
+                        android:textSize="14dp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/grey"
+                android:layout_height="0.1dp">
+            </View>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="5dp"
+
+                    android:orientation="horizontal"  android:paddingLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/a4" />
+                    <TextView  android:drawableRight="@drawable/ic_navigate_next"
+                        android:id="@+id/privacypolicy_tv"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:text="Privacy Policy"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#fff"
+                        android:textSize="14dp"  
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/grey"
+                android:layout_height="0.1dp">
+            </View>
+
+
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="5dp"
+
+                    android:orientation="horizontal"  android:paddingLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:tint="@color/yellow"
+                        android:paddingLeft="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_discount" />
+                    <TextView  android:drawableRight="@drawable/ic_navigate_next"
+                        android:id="@+id/share_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:text="Refer/Share App"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#fff"
+                        android:textSize="14dp"  
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/grey"
+                android:layout_height="0.1dp">
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="5dp"
+
+                    android:orientation="horizontal"  android:paddingLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_phone_android" />
+                    <TextView  android:drawableRight="@drawable/ic_navigate_next"
+                        android:id="@+id/call_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:text="Contact Us"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#fff"
+                        android:textSize="14dp"  
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/grey"
+                android:layout_height="0.1dp">
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="5dp"
+                    android:orientation="horizontal"  android:paddingLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:tint="@color/red"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@android:drawable/ic_lock_power_off" />
+                    <TextView  android:drawableRight="@drawable/ic_navigate_next"
+                        android:id="@+id/logout_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:text="Logout"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#fff"
+                        android:textSize="14dp"  
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/grey"
+                android:layout_marginBottom="10dp"
+                android:layout_height="0.1dp">
+            </View>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="5dp"
+            android:id="@+id/version_tv"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:text="Version : 1.9"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</RelativeLayout>

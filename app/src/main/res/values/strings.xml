@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">BlackBulls</string>
+    <!--Intro slider texts -->
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+    <string name="slide_1_title">Hello Grocery!</string>
+    <string name="slide_1_desc">The easiest way to order Grocery from your favourite Store!
+    </string>
+    <string name="slide_2_title">Near By Stores</string>
+    <string name="slide_2_desc">Order online and delivered anywhere for your family and friends!</string>
+    <string name="slide_3_title">Great Discounts</string>
+    <string name="slide_3_desc">Best discounts on every single service we offer!</string>
+    <string name="slide_4_title">World Travel</string>
+    <string name="slide_4_desc">Online Order and get fastest Delivery everytime!</string>
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome
+        slider -> clear data
+    </string>
+    <string name="play_again">Play Again</string>
+
+
+    <string name="aresurelogout">Are you sure you want to log out?</string>
+    <string name="newVersion">A new Version Available Update to the latest Version</string>
+    <string name="update">Update</string>
+    <string name="please_wait">please wait....</string>
+
+
+</resources>

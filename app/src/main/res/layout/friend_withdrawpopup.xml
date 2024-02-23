@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="20dp"
+    android:layout_margin="1dp"
+    app:cardCornerRadius="10dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/submit_button">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/a_upitransfer" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:padding="10dp"
+                        android:tint="#0F2560"
+                        android:id="@+id/rupeesymbol1"
+                        android:src="@drawable/a_mobilephone"
+                        android:layout_height="50dp">
+                    </ImageView>
+                    <View
+                        android:layout_width="0.1dp"
+                        android:id="@+id/view1"
+                        android:layout_toRightOf="@id/rupeesymbol1"
+                        android:background="@color/grey"
+                        android:layout_height="50dp">
+                    </View>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:hint="Enter mobile number"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:textColorHint="#AEACAC"
+                        android:id="@+id/mobile_et"
+                        android:textColor="@color/black"
+                        android:layout_toRightOf="@+id/view1"
+                        android:layout_height="50dp">
+                    </EditText>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/status_tv"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text=""
+                android:layout_marginLeft="10dp"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="#0B690F" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Submit_btn1"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp"
+                android:background="@drawable/otp_btn"
+                android:text="Verify Mobile"
+                android:elevation="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/amount_ll"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:elevation="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:padding="10dp"
+                            android:tint="#0F2560"
+                            android:id="@+id/rupeesymbol"
+                            android:src="@drawable/rupee"
+                            android:layout_height="50dp">
+                        </ImageView>
+                        <View
+                            android:layout_width="0.1dp"
+                            android:id="@+id/view"
+                            android:layout_toRightOf="@id/rupeesymbol"
+                            android:background="@color/grey"
+                            android:layout_height="50dp">
+                        </View>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:hint="Enter amount"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:background="@null"
+                            android:textColorHint="#AEACAC"
+                            android:id="@+id/rupee_et"
+                            android:textColor="@color/black"
+                            android:layout_toRightOf="@+id/view"
+                            android:layout_height="50dp">
+                        </EditText>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/Submit_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginRight="26dp"
+                    android:background="@drawable/otp_btn"
+                    android:text="Submit"
+                    android:elevation="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+            </LinearLayout>
+            <!-- add RadioGroup which contain the many RadioButton-->
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

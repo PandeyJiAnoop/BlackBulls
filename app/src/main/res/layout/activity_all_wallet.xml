@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+    <!-- TODO: Update blank fragment layout -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/purple_500"
+            tools:ignore="NewApi">
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/purple_500">
+                <ImageView
+                    android:id="@+id/menuImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:tint="@color/golden"
+                    android:src="@drawable/ic_arrow_back" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@id/menuImg"
+                    android:gravity="center_vertical"
+                    android:text="Wallet"
+                    android:textColor="@color/golden"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                app:cardElevation="20dp"
+                app:cardCornerRadius="20dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#2D2942"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/add_fund_ll"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout  android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp">
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="16dp"
+                                android:text="Black Bulls Wallet"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:text="Add Found to your Main wallet and purchase plan for better income return"
+                                android:textSize="12dp"
+                                android:gravity="center_horizontal"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/colorInfoIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:src="@drawable/a_coin"
+                        android:layout_height="120dp">
+                    </ImageView>
+                    <TextView
+                        android:layout_gravity="center"
+                        android:id="@+id/wallet_tv"
+                        android:textStyle="bold"
+                        android:text="00000.00"
+                        android:textSize="14dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/colorInfoIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:text="View History"
+                        android:textSize="14dp"
+                        android:padding="5dp"
+                        android:background="@drawable/rectangle_box"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/colorInfoIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:background="@drawable/otp_btn"
+                        android:id="@+id/add_fund_btn"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:text="Add Fund"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:textAllCaps="false"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:textSize="16dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                app:cardElevation="20dp"
+                app:cardCornerRadius="20dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#2D2942"
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <LinearLayout
+                    android:id="@+id/mudra_ll"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:layout_width="70dp"
+                            android:padding="10dp"
+                            android:src="@drawable/walleta"
+                            android:layout_height="70dp">
+                        </ImageView>
+                        <LinearLayout
+                            android:layout_marginLeft="70dp"
+                            android:orientation="vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="16dp"
+                                android:text="Black Bulls\nMudra Wallet"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:text="Ready to use Income"
+                                android:textSize="13dp"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/colorInfoIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <View
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="2dp"
+                        android:background="@color/grey"
+                        android:layout_height="70dp">
+
+                    </View>
+                    <RelativeLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="15dp"
+                                android:text="Total Saving"
+                                android:textColor="@color/white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:id="@+id/income_wallet_tv"
+                                android:textStyle="bold"
+                                android:text="00000.00"
+                                android:textSize="16dp"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/colorInfoIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                app:cardElevation="20dp"
+                app:cardCornerRadius="20dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#2D2942"
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <LinearLayout
+                    android:id="@+id/service_ll"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <ImageView                             android:padding="10dp"
+
+                            android:layout_centerVertical="true"
+                            android:layout_width="70dp"
+                            android:src="@drawable/walletb"
+                            android:layout_height="70dp">
+                        </ImageView>
+                        <LinearLayout
+                            android:layout_marginLeft="70dp"
+                            android:orientation="vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="16dp"
+                                android:text="Black Bulls\nService Wallet"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:text="Ready to use Topup"
+                                android:textSize="13dp"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/colorInfoIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <View
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="2dp"
+                        android:background="@color/grey"
+                        android:layout_height="70dp">
+
+                    </View>
+                    <RelativeLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="15dp"
+                                android:text="Total Saving"
+                                android:textColor="@color/white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:id="@+id/topup_wallet_tv"
+                                android:textStyle="bold"
+                                android:text="00000.00"
+                                android:textSize="16dp"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/colorInfoIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                app:cardElevation="20dp"
+                app:cardCornerRadius="20dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#2D2942"
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <LinearLayout
+                    android:id="@+id/coin_safe_ll"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <ImageView                             android:padding="10dp"
+
+                            android:layout_centerVertical="true"
+                            android:layout_width="70dp"
+                            android:src="@drawable/walletc"
+                            android:layout_height="70dp">
+                        </ImageView>
+                        <LinearLayout
+                            android:layout_marginLeft="70dp"
+                            android:orientation="vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="16dp"
+                                android:text="Black Bulls\nCoin Safe Wallet"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:text="Ready to use Recharge"
+                                android:textSize="13dp"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/colorInfoIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <View
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="2dp"
+                        android:background="@color/grey"
+                        android:layout_height="70dp">
+
+                    </View>
+                    <RelativeLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="15dp"
+                                android:text="Total Saving"
+                                android:textColor="@color/white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:id="@+id/recharge_wallet_tv"
+                                android:textStyle="bold"
+                                android:text="0000.00"
+                                android:textSize="16dp"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/colorInfoIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

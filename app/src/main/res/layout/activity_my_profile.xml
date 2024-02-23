@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:orientation="vertical">
+    <!-- TODO: Update blank fragment layout -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/purple_500"
+            tools:ignore="NewApi">
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/purple_500">
+
+                <ImageView
+                    android:id="@+id/menuImg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:tint="@color/golden"
+                    android:src="@drawable/ic_arrow_back" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="17dp"
+                    android:layout_toRightOf="@id/menuImg"
+                    android:gravity="center_vertical"
+                    android:text="My Profile"
+                    android:textColor="@color/golden"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+               
+                android:visibility="gone"
+                android:padding="5dp"
+                
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content">
+                <LinearLayout android:background="@drawable/shapeforadd"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Customer Information"
+                        android:textColor="@color/white"
+                        android:background="@color/golden"                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Customer Id"
+                        android:textColor="@color/golden" />
+
+                        <EditText android:paddingLeft="10dp"  android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/sponser_id_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="Customer Id"
+                            android:focusable="false"
+                            android:clickable="false"
+                            android:textColorHint="@color/golden"
+                            android:textColor="@color/golden"
+                            android:singleLine="true" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:elevation="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.coordinatorlayout.widget.CoordinatorLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.github.siyamed.shapeimageview.CircularImageView
+                            android:id="@+id/profule"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:background="@drawable/a_account"
+                            android:layout_marginTop="5dp"/>
+
+                        <ImageView
+                            android:id="@+id/iv_uploadimage"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom|right"
+                            android:background="@drawable/circle"
+                            android:padding="5dp"
+                            android:backgroundTint="@color/blue"
+                            android:src="@android:drawable/ic_menu_edit" />
+                    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="#8E8E8E"
+                        android:layout_height="0.1dp">
+
+                    </View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="7dp"
+                        
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+
+                            android:text="Full Name"
+                            
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="0.1dp"
+                            android:background="#8E8E8E"
+                            android:layout_height="30dp">
+                        </View>
+                        <EditText android:paddingLeft="10dp" 
+                            android:id="@+id/name_et"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="1"
+                            android:background="@null"
+                            
+                            android:text="N/A"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="#8E8E8E"
+                        android:layout_height="0.1dp">
+
+                    </View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center"
+                        android:padding="7dp"
+                        
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="Mobile"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+                        <View
+                            android:layout_width="0.1dp"
+                            android:background="#8E8E8E"
+                            android:layout_height="30dp">
+                        </View>
+
+                        <EditText android:paddingLeft="10dp"
+                            android:id="@+id/mobile_et"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="1"
+                            android:background="@null"
+                            
+                            android:clickable="false"
+                            android:enabled="false"
+                            
+                            
+                            android:text="N/A"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="#8E8E8E"
+                        android:layout_height="0.1dp">
+
+                    </View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center"
+                        android:padding="7dp"
+                        
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+
+                            android:text="Email Id"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+                        <View
+                            android:layout_width="0.1dp"
+                            android:background="#8E8E8E"
+                            android:layout_height="30dp">
+                        </View>
+
+                        <EditText android:paddingLeft="10dp"
+                            android:id="@+id/email_et"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="1"
+                            
+                            android:text="N/A"
+                            android:background="@null"
+                            
+                            
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="#8E8E8E"
+                        android:layout_height="0.1dp">
+
+                    </View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center"
+                        android:visibility="gone"
+                        
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/qualif"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="1"
+                            
+                            android:text="Qualification"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+                        <View
+                            android:layout_width="0.1dp"
+                            android:background="#8E8E8E"
+                            android:layout_height="30dp">
+                        </View>
+
+                        <Spinner
+                            android:id="@+id/sp_Gender"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+
+                            android:layout_weight="1"
+                            android:textColor="@color/white"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_qualification"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="1"
+                            
+                            android:text="N/A"
+                            
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="#8E8E8E"
+                        android:layout_height="0.1dp">
+
+                    </View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        
+                        android:gravity="center"
+                        android:padding="7dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+
+                            android:text="Registration Date"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+                        <View
+                            android:layout_width="0.1dp"
+                            android:background="#8E8E8E"
+                            android:layout_height="30dp">
+                        </View>
+
+                        <Spinner
+                            android:id="@+id/sp_state"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+
+                            android:layout_weight="1"
+                            android:fontFamily="serif"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:visibility="gone" />
+
+                        <EditText android:paddingLeft="10dp"
+                            android:id="@+id/gender_et"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="1"
+                            android:background="@null"
+                            
+
+
+                            android:text="N/A"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="#8E8E8E"
+                        android:layout_height="0.1dp">
+
+                    </View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center"
+                        android:padding="7dp"
+                        
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/dob"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+
+                            android:text="Account Number"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+                        <View
+                            android:layout_width="0.1dp"
+                            android:background="#8E8E8E"
+                            android:layout_height="30dp">
+                        </View>
+
+                        <Spinner
+                            android:id="@+id/sp_City"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+
+                            android:layout_weight="1"
+                            android:fontFamily="serif"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:visibility="gone" />
+
+                        <EditText android:paddingLeft="10dp"
+                            android:id="@+id/ACCOUNTNO_et"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="1"
+                            android:background="@null"
+                            
+
+
+                            android:text="N/A"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="#8E8E8E"
+                        android:layout_height="0.1dp">
+
+                    </View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center"
+                        android:padding="7dp"
+
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+
+                            android:text="IFSC Code"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+                        <View
+                            android:layout_width="0.1dp"
+                            android:background="#8E8E8E"
+                            android:layout_height="30dp">
+                        </View>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <EditText
+                                android:layout_marginRight="30dp"
+                                android:paddingLeft="10dp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/IFSC_et"
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:layout_width="match_parent"
+                                android:text="N/A"
+                                android:textColor="@color/white"
+                                android:textSize="12dp" />
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/checkifsc_img"
+                                android:layout_alignParentRight="true"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="bottom|right"
+                                android:background="@drawable/circle"
+                                android:padding="5dp"
+                                android:backgroundTint="@color/blue"
+                                android:src="@android:drawable/checkbox_on_background" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="#8E8E8E"
+                        android:layout_height="0.1dp">
+
+                    </View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center"
+                        android:padding="7dp"
+                        
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/add"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+
+                            android:text="Bank Name"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+                        <View
+                            android:layout_width="0.1dp"
+                            android:background="#8E8E8E"
+                            android:layout_height="30dp">
+                        </View>
+
+                        <EditText android:paddingLeft="10dp"
+                            android:id="@+id/BANKNAME_et"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="1"
+                            android:background="@null"
+                            
+
+
+                            android:text="N/A"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="#8E8E8E"
+                        android:layout_height="0.1dp">
+
+                    </View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center"
+                        android:padding="7dp"
+
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="Branch"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+                        <View
+                            android:layout_width="0.1dp"
+                            android:background="#8E8E8E"
+                            android:layout_height="30dp">
+                        </View>
+
+                        <EditText android:paddingLeft="10dp"
+                            android:id="@+id/branch_et"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="1"
+                            android:background="@null"
+
+
+
+                            android:text="N/A"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="#8E8E8E"
+                        android:layout_height="0.1dp">
+
+                    </View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        
+                        android:gravity="center"
+                        android:padding="7dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+
+                            android:text="Account Holder Name"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+                        <View
+                            android:layout_width="0.1dp"
+                            android:background="#8E8E8E"
+                            android:layout_height="30dp">
+                        </View>
+
+                        <EditText android:paddingLeft="10dp"
+                            android:id="@+id/ACCOUNTHOLDER_et"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="1"
+                            android:background="@null"
+                            
+
+
+                            android:text="N/A"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="#8E8E8E"
+                        android:layout_height="0.1dp">
+
+                    </View>
+
+                    <LinearLayout
+                        android:id="@+id/KYCUpdate_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+
+                        
+                        android:gravity="center"
+                        android:padding="7dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="1"
+                            
+                            android:text="KYC Verification"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+                      
+
+                        <TextView
+                            android:id="@+id/kycststus_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:textAlignment="center"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:drawableRight="@drawable/ic_navigate_next"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            
+                            
+                            android:text="Complete Now"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="#8E8E8E"
+                        android:layout_height="0.1dp">
+
+                    </View>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submit"
+                android:layout_width="250dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/rectangle_red"
+                android:text="Update Details"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

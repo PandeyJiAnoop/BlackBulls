@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+    <!-- TODO: Update blank fragment layout -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/purple_500"
+            tools:ignore="NewApi">
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/purple_500">
+                <ImageView
+                    android:id="@+id/menuImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:tint="@color/golden"
+                    android:src="@drawable/ic_arrow_back" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="17dp"
+                    android:layout_toRightOf="@id/menuImg"
+                    android:gravity="center_vertical"
+                    android:text="Raise Add Request"
+                    android:textColor="@color/golden"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <RadioGroup
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/rdGroup"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:layout_gravity="center">
+                <RadioButton  android:textColor="@color/white"
+                    android:id="@+id/btc"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="BTC"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"/>
+                <RadioButton  android:textColor="@color/white"
+                    android:id="@+id/bnb"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="BNB"
+                    android:onClick="onRadioButtonClicked"/>
+                <RadioButton
+                    android:id="@+id/eth"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="ETH"
+                    android:onClick="onRadioButtonClicked"/>
+                <RadioButton  android:textColor="@color/white"
+                    android:id="@+id/usdt"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="USDT"
+                    android:onClick="onRadioButtonClicked"/>
+            </RadioGroup>
+            <ImageView
+                android:background="@color/white"
+                android:id="@+id/image_qr"
+                android:layout_width="match_parent"
+                android:src="@drawable/qr"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+            </ImageView>
+            <TextView
+                android:id="@+id/url_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="#0972C5"
+                android:text="Upload Transaction Details"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:padding="10dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="Amount"
+                android:textColor="@color/golden" />
+                <EditText
+                    android:id="@+id/amount_et"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/rounded_edittext_black"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="@color/golden"
+                    android:hint="Enter  Amount"
+                    android:textColorHint="@color/text_grey"
+                    android:singleLine="true" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="Transaction Number "
+                android:textColor="@color/golden" />
+
+
+            <EditText
+                android:id="@+id/transcation_number_et"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/rounded_edittext_black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="@color/golden"
+                android:hint="Enter Transaction number"
+                android:textColorHint="@color/text_grey"
+                android:singleLine="true" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="Transaction Date|Time"
+                android:textColor="@color/golden" />
+            <EditText
+                android:id="@+id/date_time_et"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/rounded_edittext_black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="@color/golden"
+                android:textColorHint="@color/text_grey"
+                android:hint="Enter date time"
+                android:singleLine="true" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="Upload Receipt"
+                android:textColor="@color/golden" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:padding="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp">
+                <ImageView
+                    android:id="@+id/img_showProfile"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="3dp"
+                    android:background="@drawable/a4"
+                    android:scaleType="fitXY" />
+                <TextView
+                    android:id="@+id/select_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_centerInParent="true"
+                    android:text="Choose File"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/edit_style"
+                    android:textSize="12dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="30dp"
+                    android:paddingLeft="30dp"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Add_button"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rectangle_red"
+                android:text="Proceed To add Fund"
+                android:textColor="@color/white" />
+            <TextView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="#0972C5"
+                android:text="Transaction History"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:padding="10dp"
+                android:textStyle="bold" />
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_below="@+id/header"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/all_member_ll"
+                android:layout_marginBottom="50dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/norecord_tv"
+                    android:layout_centerInParent="true"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/norecord"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcvList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

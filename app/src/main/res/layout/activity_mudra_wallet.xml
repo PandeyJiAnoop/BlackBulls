@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/purple_500"
+            tools:ignore="NewApi">
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/purple_500">
+
+                <ImageView
+                    android:id="@+id/menuImg"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:tint="@color/golden"
+                    android:src="@drawable/ic_arrow_back" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="17dp"
+                    android:layout_toRightOf="@id/menuImg"
+                    android:gravity="center_vertical"
+                    android:text="BlackBulls Mudra Wallet"
+                    android:textColor="@color/golden"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+                <LinearLayout               android:id="@+id/wallet"
+                    android:background="@color/black"
+
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:text="Wallet Balance"
+                                android:padding="10dp"
+                                android:textColor="@color/golden" />
+                            <TextView
+                                android:background="@drawable/otp_btn"
+                                android:layout_marginTop="5dp"
+                                android:id="@+id/raise_add_tv"
+                                android:layout_alignParentRight="true"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp"
+                                android:gravity="center_vertical"
+                                android:layout_marginRight="5dp"
+                                android:text="Withdraw"
+                                android:textAlignment="center"
+                                android:padding="10dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/golden" />
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/credit_tv"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:textSize="21dp"
+                            android:textStyle="bold"
+                            android:text="\u20B9 00.00"
+                            android:textColor="@color/golden" />
+                        <TextView
+                            android:layout_marginRight="10dp"
+                            android:layout_gravity="end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="* Min.200 withdraw From mudra wallet"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="10sp"
+                            android:textColor="@color/white" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:background="@color/grey"
+                            android:layout_margin="10dp"
+                            android:layout_height="0.1dp">
+                        </View>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:padding="5dp"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:text="BlackBulls Mudra Wallet"
+                                android:textSize="12dp"
+                                android:textColor="@color/golden" />
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:id="@+id/wallet_amount_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:textSize="16dp"
+                                android:text="\u20B9 00.00"
+                                android:textColor="@color/golden" />
+                            <View
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                android:background="@color/grey"
+                                android:layout_height="0.1dp">
+                            </View>
+
+                        </LinearLayout>
+                        <LinearLayout                 android:padding="5dp"
+
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:text="BlackBulls Service Wallet"
+                                android:textSize="12dp"
+                                android:textColor="@color/golden" />
+                            <TextView
+                                android:id="@+id/debit_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:textSize="16dp"                   android:layout_marginTop="5dp"
+
+                                android:text="\u20B9 00.00"
+                                android:textColor="@color/golden" />
+                            <View                   android:layout_marginTop="5dp"
+
+                                android:layout_width="match_parent"
+                                android:background="@color/grey"
+                                android:layout_height="0.1dp">
+                            </View>
+                        </LinearLayout>
+                        <LinearLayout                 android:padding="5dp"
+
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:text="BlackBulls Coin Safe Wallet"
+                                android:textSize="12dp"
+                                android:textColor="@color/golden" />
+                            <TextView
+                                android:id="@+id/coin_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:layout_marginTop="5dp"
+
+                                android:textSize="16dp"
+                                android:text="\u20B9 00.00"
+                                android:textColor="@color/golden" />
+                            <View                   android:layout_marginTop="5dp"
+
+                                android:layout_width="match_parent"
+                                android:background="@color/grey"
+                                android:layout_height="0.1dp">
+                            </View>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="#0972C5"
+                android:text="Transaction History"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:padding="10dp"
+                android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/all_member_ll"
+                    android:layout_marginBottom="30dp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/norecord_tv"
+                        android:layout_centerInParent="true"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/norecord"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcvList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+        </LinearLayout>
+</LinearLayout>

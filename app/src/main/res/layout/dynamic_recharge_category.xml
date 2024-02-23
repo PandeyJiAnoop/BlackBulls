@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="1dp"
+    android:padding="2dp"
+    android:gravity="center_vertical"
+    android:layout_height="110dp">
+                <LinearLayout
+                    android:id="@+id/mobile_ll"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:orientation="vertical">
+                    <com.github.siyamed.shapeimageview.CircularImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:backgroundTint="@color/white"
+                        android:background="@drawable/bg_offer_home"
+                        android:id="@+id/provider_img"
+                        android:layout_gravity="center_horizontal"/>
+                    <TextView
+                        android:id="@+id/provider_name_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Mobile \nRecharge"
+                        android:textSize="12sp"
+                        android:padding="2dp"
+                        android:maxLines="2"
+                        android:maxLength="40"
+                        android:textColor="@color/golden" />
+                </LinearLayout>
+
+
+
+</RelativeLayout>

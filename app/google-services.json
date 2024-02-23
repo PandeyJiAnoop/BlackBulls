@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "940004363706",
+    "firebase_url": "https://blackbulls-d0969-default-rtdb.firebaseio.com",
+    "project_id": "blackbulls-d0969",
+    "storage_bucket": "blackbulls-d0969.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940004363706:android:c17ce69ef1a1267697e183",
+        "android_client_info": {
+          "package_name": "com.akp.blackbulls"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "940004363706-ojr343e4sjg9l3m6keg3f7fkcnfb18ta.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.akp.blackbulls",
+            "certificate_hash": "4db9b4aba42d20c77aa1e57e61e8c02016246964"
+          }
+        },
+        {
+          "client_id": "940004363706-bpa8pknigps0791vn3n0e0ohk3ree8dp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrBZ7iThTq4x9m_5MuC5WkxKHPm2FGPUU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "940004363706-bpa8pknigps0791vn3n0e0ohk3ree8dp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

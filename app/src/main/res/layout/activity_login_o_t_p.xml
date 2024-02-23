@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background">
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/purple_500">
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/ivBack"
+            android:text="BlackBulls Login"
+            android:textColor="@color/golden"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+
+            <ScrollView
+                android:layout_above="@+id/bottomrl"
+                android:layout_below="@+id/rlHeader"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="50dp"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:padding="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:src="@drawable/splashlogo"
+                        android:layout_height="150dp">
+                    </ImageView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            app:cardCornerRadius="30dp"
+                            android:id="@+id/cv"
+                            app:cardElevation="20dp"
+                            android:layout_margin="10dp"
+                            app:cardBackgroundColor="#2D2942"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Login"
+                                    android:textSize="25dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/golden"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Enter your Mobile number and create a account with us"
+                                    android:textSize="15dp"
+                                    android:layout_marginTop="7dp"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textColor="@color/golden"/>
+
+                                <RelativeLayout
+                                    android:background="@drawable/otp_btn"
+                                    android:layout_marginTop="7dp"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp">
+                                    <EditText
+                                        android:paddingLeft="20dp"
+                                        android:id="@+id/mob_et"
+                                        android:layout_marginRight="60dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:textColor="@color/white"
+                                        android:hint="Continue with +91-123456789"
+                                        android:layout_centerVertical="true"
+                                        android:gravity="center_vertical"
+                                        android:background="@null"
+                                        android:inputType="number"
+                                        android:maxLength="10"
+                                        android:textSize="14dp"
+                                        android:singleLine="true"
+                                        android:textColorHint="#B4B4B4"  />
+                                    <ImageView
+                                        android:tint="@color/white"
+                                        android:layout_width="50dp"
+                                        android:padding="5dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_centerVertical="true"
+                                        android:layout_alignParentRight="true"
+                                        android:src="@drawable/user_icon"
+                                        android:layout_height="50dp">
+                                    </ImageView>
+                                </RelativeLayout>
+                                <LinearLayout
+                                    android:visibility="gone"
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_gravity="center"
+                                    android:layout_height="30dp">
+                                    <CheckBox
+                                        android:id="@+id/chk1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:clickable="true"
+                                        android:textSize="12sp"
+                                        android:textColor="#EFEFEF"
+                                        android:text="Have you any REFERRAL CODE ?" />
+                                </LinearLayout>
+
+
+                                <RelativeLayout
+                                    android:background="@drawable/otp_btn"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:id="@+id/ref_rl"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp">
+                                    <EditText
+                                        android:textColorHint="#B4B4B4"
+                                        android:layout_width="match_parent"
+                                        android:hint="Enter Referral Code"
+                                        android:id="@+id/ref_et"
+                                        android:layout_centerVertical="true"
+                                        android:paddingLeft="30dp"
+                                        android:textSize="14sp"  android:background="@null"
+                                        android:textColor="@color/white"
+                                        android:layout_height="45dp">
+
+                                    </EditText>
+                                    <TextView
+                                        android:id="@+id/checkref_img"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_width="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_height="35dp"
+                                        android:layout_marginRight="7dp"
+                                        android:textSize="12dp"
+                                        android:textColor="#36FC3E"
+                                        android:text=""
+                                        android:layout_gravity="bottom|right"
+                                        android:padding="5dp"/>
+                                </RelativeLayout>
+
+
+
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:background="@drawable/submit_button"
+                                    android:id="@+id/btnSubmit"
+                                    android:layout_width="300dp"
+                                    android:layout_height="45dp"
+                                    android:text="Submit"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginBottom="25dp"
+                                    android:textAllCaps="false"
+                                    android:layout_marginRight="16dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:textSize="16dp"
+                                    android:layout_gravity="center"
+                                    android:textColor="@color/white"/>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </ScrollView>
+    <LinearLayout
+        android:id="@+id/bottomrl"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/signup_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="By Continuing,you agree to our \nTerms Of Services |Privacy Policy| Code of Conduct"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+        <View
+            android:layout_width="200dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorInfoIcon"
+            android:layout_height="3dp">
+
+        </View>
+    </LinearLayout>
+
+</RelativeLayout>

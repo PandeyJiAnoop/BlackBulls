@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+  <!-- TODO: Update blank fragment layout -->
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:background="@color/grey"
+      android:gravity="center"
+      android:text="PERSONAL DETAILS"
+      android:textColor="@color/golden"
+      android:textStyle="bold"
+      android:visibility="gone" />
+
+  <com.google.android.material.appbar.AppBarLayout
+      android:layout_width="match_parent"
+      android:layout_height="?android:attr/actionBarSize">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/purple_500"
+        tools:ignore="NewApi">
+
+      <RelativeLayout
+          android:id="@+id/header"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:layout_marginLeft="0dp"
+          android:layout_marginTop="0dp"
+          android:background="@color/purple_500">
+
+        <ImageView
+            android:id="@+id/menuImg"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:tint="@color/golden"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="17dp"
+            android:layout_toRightOf="@id/menuImg"
+            android:gravity="center_vertical"
+            android:text="Wallet History"
+            android:textColor="@color/golden"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+      </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="50dp">
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/pending_btn"
+            android:background="@color/yellow"
+            android:text="Income"
+            android:layout_marginRight="0.5dp"
+
+            android:layout_height="match_parent">
+
+        </androidx.appcompat.widget.AppCompatButton>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/approved_btn"
+            android:layout_marginRight="0.5dp"
+            android:text="Recharge"
+            android:background="@color/skyblue"
+            android:layout_height="match_parent">
+
+        </androidx.appcompat.widget.AppCompatButton>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/rejected_btn"
+            android:background="@color/skyblue"
+            android:text="TopUp"
+            android:layout_height="match_parent">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+      </LinearLayout>
+
+      <RelativeLayout
+          android:orientation="vertical"
+          android:id="@+id/pending_ll"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+        <LinearLayout               android:id="@+id/wallet"
+            android:background="@color/black"
+
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:text="Wallet Balance"
+                  android:padding="10dp"
+                  android:textColor="@color/golden" />
+              <TextView android:visibility="gone"
+                  android:id="@+id/raise_add_tv"
+                  android:layout_alignParentRight="true"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:layout_marginRight="5dp"
+                  android:text="Raise Add Request"
+                  android:padding="10dp"
+                  android:background="@drawable/bg_btn"
+                  android:textColor="@color/golden" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/wallet_amount_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="21dp"
+                android:textStyle="bold"
+                android:text="\u20B9 00.00"
+                android:textColor="@color/golden" />
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/grey"
+                android:layout_margin="10dp"
+                android:layout_height="0.1dp">
+            </View>
+
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:orientation="horizontal"
+              android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:text="Total Credit"
+                  android:padding="10dp"
+                  android:textColor="@color/golden" />
+              <TextView
+                  android:id="@+id/credit_tv"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginRight="10dp"
+                  android:textSize="16dp"
+                  android:text="\u20B9 00.00"
+                  android:textColor="@color/golden" />
+              <View
+                  android:layout_width="match_parent"
+                  android:background="@color/grey"
+                  android:layout_margin="10dp"
+                  android:layout_height="0.1dp">
+              </View>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:text="Total Debit"
+                  android:padding="10dp"
+                  android:textColor="@color/golden" />
+              <TextView
+                  android:id="@+id/debit_tv"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginRight="10dp"
+                  android:textSize="16dp"
+                  android:text="\u20B9 00.00"
+                  android:textColor="@color/golden" />
+              <View
+                  android:layout_width="match_parent"
+                  android:background="@color/grey"
+                  android:layout_margin="10dp"
+                  android:layout_height="0.1dp">
+              </View>
+
+            </LinearLayout>
+
+          </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:background="@color/transparent"
+            android:layout_below="@+id/wallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:text="No Record found!"
+              android:padding="15dp"
+              android:gravity="center_horizontal"
+              android:layout_centerHorizontal="true"
+              android:textColor="@color/red"
+              android:textSize="20dp"
+              android:textStyle="bold" />
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/pending_rec"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+          </androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:visibility="gone"
+          android:orientation="vertical"
+          android:id="@+id/approve_ll"
+          android:background="@color/transparent"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+           <LinearLayout
+           android:id="@+id/wallet1"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:text="Wallet Balance"
+                  android:padding="10dp"
+                  android:textColor="@color/golden" />
+              <TextView android:visibility="gone"
+                  android:layout_alignParentRight="true"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:layout_marginRight="5dp"
+                  android:text="Raise Add Request"
+                  android:padding="10dp"
+                  android:background="@drawable/bg_btn"
+                  android:textColor="@color/golden" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="21dp"
+                android:textStyle="bold"
+                android:text="\u20B9 00.00"
+                android:textColor="@color/golden" />
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/grey"
+                android:layout_margin="10dp"
+                android:layout_height="0.1dp">
+            </View>
+
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:orientation="horizontal"
+              android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:text="Total Credit"
+                  android:padding="10dp"
+                  android:textColor="@color/golden" />
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginRight="10dp"
+                  android:textSize="16dp"
+                  android:text="\u20B9 00.00"
+                  android:textColor="@color/golden" />
+              <View
+                  android:layout_width="match_parent"
+                  android:background="@color/grey"
+                  android:layout_margin="10dp"
+                  android:layout_height="0.1dp">
+              </View>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:text="Total Debit"
+                  android:padding="10dp"
+                  android:textColor="@color/golden" />
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginRight="10dp"
+                  android:textSize="16dp"
+                  android:text="\u20B9 00.00"
+                  android:textColor="@color/golden" />
+              <View
+                  android:layout_width="match_parent"
+                  android:background="@color/grey"
+                  android:layout_margin="10dp"
+                  android:layout_height="0.1dp">
+              </View>
+            </LinearLayout>
+          </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:background="@color/transparent"
+            android:layout_below="@+id/wallet1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="No Record found!"
+            android:padding="15dp"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/red"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/approved_rec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:visibility="gone"
+          android:orientation="vertical"
+          android:id="@+id/rejected_ll"
+          android:background="@color/transparent"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+         <LinearLayout
+           android:id="@+id/wallet2"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:text="Wallet Balance"
+                  android:padding="10dp"
+                  android:textColor="@color/golden" />
+              <TextView android:visibility="gone"
+                  android:layout_alignParentRight="true"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:layout_marginRight="5dp"
+                  android:text="Raise Add Request"
+                  android:padding="10dp"
+                  android:background="@drawable/bg_btn"
+                  android:textColor="@color/golden" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="21dp"
+                android:textStyle="bold"
+                android:text="\u20B9 00.00"
+                android:textColor="@color/golden" />
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/grey"
+                android:layout_margin="10dp"
+                android:layout_height="0.1dp">
+            </View>
+
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:orientation="horizontal"
+              android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:text="Total Credit"
+                  android:padding="10dp"
+                  android:textColor="@color/golden" />
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginRight="10dp"
+                  android:textSize="16dp"
+                  android:text="\u20B9 00.00"
+                  android:textColor="@color/golden" />
+              <View
+                  android:layout_width="match_parent"
+                  android:background="@color/grey"
+                  android:layout_margin="10dp"
+                  android:layout_height="0.1dp">
+              </View>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:text="Total Debit"
+                  android:padding="10dp"
+                  android:textColor="@color/golden" />
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginRight="10dp"
+                  android:textSize="16dp"
+                  android:text="\u20B9 00.00"
+                  android:textColor="@color/golden" />
+              <View
+                  android:layout_width="match_parent"
+                  android:background="@color/grey"
+                  android:layout_margin="10dp"
+                  android:layout_height="0.1dp">
+              </View>
+            </LinearLayout>
+          </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:background="@color/transparent"
+            android:layout_below="@+id/wallet2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="No Record found!"
+            android:padding="15dp"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/red"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rejected_rec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </androidx.recyclerview.widget.RecyclerView>
+
+      </RelativeLayout>
+      </RelativeLayout>
+
+    </LinearLayout>
+  </ScrollView>
+</LinearLayout>
